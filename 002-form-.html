@@ -1,0 +1,1969 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>body {
+  max-width: 980px;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 45px;
+}
+
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body .codehilitetable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before,
+.markdown-body hr:after {
+  display: table;
+  content: " ";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .headerlink {
+  font: normal 400 16px fontawesome-mini;
+  vertical-align: middle;
+  margin-left: -16px;
+  float: left;
+  display: inline-block;
+  text-decoration: none;
+  opacity: 0;
+  color: #333;
+}
+
+.markdown-body .headerlink:focus {
+  outline: none;
+}
+
+.markdown-body h1 .headerlink {
+  margin-top: 0.8rem;
+}
+
+.markdown-body h2 .headerlink,
+.markdown-body h3 .headerlink {
+  margin-top: 0.6rem;
+}
+
+.markdown-body h4 .headerlink {
+  margin-top: 0.2rem;
+}
+
+.markdown-body h5 .headerlink,
+.markdown-body h6 .headerlink {
+  margin-top: 0;
+}
+
+.markdown-body .headerlink:hover,
+.markdown-body h1:hover .headerlink,
+.markdown-body h2:hover .headerlink,
+.markdown-body h3:hover .headerlink,
+.markdown-body h4:hover .headerlink,
+.markdown-body h5:hover .headerlink,
+.markdown-body h6:hover .headerlink {
+  opacity: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body .admonition {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code,
+.markdown-body samp {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .codehilite {
+  margin-bottom: 16px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .codehilite pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
+}
+
+.markdown-body .admonition table {
+  color: #333;
+}
+
+.markdown-body .admonition p {
+  padding: 0;
+}
+
+.markdown-body .admonition-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.markdown-body .admonition>.admonition-title {
+  color: #333;
+}
+
+.markdown-body .attention>.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution>.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint>.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger>.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question>.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note>.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: "\f056\00a0";
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: "\f058\00a0";
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: "\f06a\00a0";
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: "\f05a\00a0";
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: "\f057\00a0";
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: "\f059\00a0";
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: "\f040\00a0";
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* MultiMarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
+  font-style: italic;
+}
+
+.markdown-body .headeranchor {
+  font: normal normal 16px fontawesome-mini;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.headeranchor:before {
+  content: '\e157';
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}
+
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
+}
+
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
+
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
+
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
+
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
+
+  .markdown-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  .markdown-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .markdown-body .ir a:after,
+  .markdown-body a[href^="javascript:"]:after,
+  .markdown-body a[href^="#"]:after {
+    content: "";
+  }
+
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
+}
+</style><style>/*GitHub*/
+.codehilite {background-color:#fff;color:#333333;}
+.codehilite .hll {background-color:#ffffcc;}
+.codehilite .c{color:#999988;font-style:italic}
+.codehilite .err{color:#a61717;background-color:#e3d2d2}
+.codehilite .k{font-weight:bold}
+.codehilite .o{font-weight:bold}
+.codehilite .cm{color:#999988;font-style:italic}
+.codehilite .cp{color:#999999;font-weight:bold}
+.codehilite .c1{color:#999988;font-style:italic}
+.codehilite .cs{color:#999999;font-weight:bold;font-style:italic}
+.codehilite .gd{color:#000000;background-color:#ffdddd}
+.codehilite .ge{font-style:italic}
+.codehilite .gr{color:#aa0000}
+.codehilite .gh{color:#999999}
+.codehilite .gi{color:#000000;background-color:#ddffdd}
+.codehilite .go{color:#888888}
+.codehilite .gp{color:#555555}
+.codehilite .gs{font-weight:bold}
+.codehilite .gu{color:#800080;font-weight:bold}
+.codehilite .gt{color:#aa0000}
+.codehilite .kc{font-weight:bold}
+.codehilite .kd{font-weight:bold}
+.codehilite .kn{font-weight:bold}
+.codehilite .kp{font-weight:bold}
+.codehilite .kr{font-weight:bold}
+.codehilite .kt{color:#445588;font-weight:bold}
+.codehilite .m{color:#009999}
+.codehilite .s{color:#dd1144}
+.codehilite .n{color:#333333}
+.codehilite .na{color:teal}
+.codehilite .nb{color:#0086b3}
+.codehilite .nc{color:#445588;font-weight:bold}
+.codehilite .no{color:teal}
+.codehilite .ni{color:purple}
+.codehilite .ne{color:#990000;font-weight:bold}
+.codehilite .nf{color:#990000;font-weight:bold}
+.codehilite .nn{color:#555555}
+.codehilite .nt{color:navy}
+.codehilite .nv{color:teal}
+.codehilite .ow{font-weight:bold}
+.codehilite .w{color:#bbbbbb}
+.codehilite .mf{color:#009999}
+.codehilite .mh{color:#009999}
+.codehilite .mi{color:#009999}
+.codehilite .mo{color:#009999}
+.codehilite .sb{color:#dd1144}
+.codehilite .sc{color:#dd1144}
+.codehilite .sd{color:#dd1144}
+.codehilite .s2{color:#dd1144}
+.codehilite .se{color:#dd1144}
+.codehilite .sh{color:#dd1144}
+.codehilite .si{color:#dd1144}
+.codehilite .sx{color:#dd1144}
+.codehilite .sr{color:#009926}
+.codehilite .s1{color:#dd1144}
+.codehilite .ss{color:#990073}
+.codehilite .bp{color:#999999}
+.codehilite .vc{color:teal}
+.codehilite .vg{color:teal}
+.codehilite .vi{color:teal}
+.codehilite .il{color:#009999}
+.codehilite .gc{color:#999;background-color:#EAF2F5}
+</style><title>002-form-</title></head><body><article class="markdown-body"><h1 id="-form-">-form-<a class="headerlink" href="#-form-" title="Permanent link"></a></h1>
+<p>1.-form-    形式，格式，形成
+【词源】① 来源于拉丁语动词 formare 形成，因为该词根常加前缀构词，所以有些词典将其视为后缀，但无论怎么说，该词根所构成的词汇都很容易辨认和理解；② 来源基础词 form 形状/形成/形态，词根与之同形义。
+【引申】形式/外形/形状/形成
+【前缀】
+【后缀】
++ 形式</p>
+<h3 id="transform">transform<a class="headerlink" href="#transform" title="Permanent link"></a></h3>
+<ul>
+<li>转变形式
+transform [træns&rsquo;fɔːm] v. 转化，转变，使改变外观（或性质）；使改变【词频 2199】【X8M3】【X10M2】 transformation [trænsfə&rsquo;meɪʃ(ə)n] n. 转型，彻底改观，变革【词频 3311】【X11M6】
+transformative [trænz&rsquo;fɔmətɪv] adj. 变化的，变形的【词频 15852】 transformer [træns&rsquo;fɔːmə] n. [电] 变压器；促使变化的人【词频 18403】
+transformational [,trænzfə&rsquo;meʃənəl] adj. 转换的；改变的；转换生成的【词频 20878】transformed [trænsˈfɔːmd]【transform 的变形】【词频 22710】
+log-transformed [lɒg-træns&rsquo;fɔːmd] adj. 对数变换的【词频 58483】 untransformed [ʌn’træns&rsquo;fɔːm] adj. 未改变的【词频 50170】</li>
+</ul>
+<h5 id="transform_1">transform<a class="headerlink" href="#transform_1" title="Permanent link"></a></h5>
+<ul>
+<li>transform sth. into sth. 把&hellip;转换为</li>
+<li>转型 transform sb from sth. into sth.</li>
+</ul>
+<h5 id="transformer">transformer<a class="headerlink" href="#transformer" title="Permanent link"></a></h5>
+<ul>
+<li>促使变化者</li>
+<li>变压器</li>
+</ul>
+<h5 id="transformation">transformation<a class="headerlink" href="#transformation" title="Permanent link"></a></h5>
+<ul>
+<li>转换，转型 economic transformations 经济转型</li>
+</ul>
+<h5 id="transformative">transformative<a class="headerlink" href="#transformative" title="Permanent link"></a></h5>
+<ul>
+<li>变革的，转型的transformative justice 转型正义</li>
+</ul>
+<h5 id="transformational">transformational<a class="headerlink" href="#transformational" title="Permanent link"></a></h5>
+<ul>
+<li>转换的  transformational leadership 变革型领导</li>
+</ul>
+<h5 id="transformed">transformed<a class="headerlink" href="#transformed" title="Permanent link"></a></h5>
+<ul>
+<li>转换的</li>
+</ul>
+<h5 id="log-transformed">log-transformed<a class="headerlink" href="#log-transformed" title="Permanent link"></a></h5>
+<ul>
+<li>对数变换的</li>
+</ul>
+<h5 id="untransformed">untransformed<a class="headerlink" href="#untransformed" title="Permanent link"></a></h5>
+<ul>
+<li>未转换的</li>
+</ul>
+<h3 id="form">form<a class="headerlink" href="#form" title="Permanent link"></a></h3>
+<ul>
+<li>形式
+form [fɔːm] vi. 形成 n. 表格【词频 523，887】【B1M5】【X6M1】 formation [fɔː&rsquo;meɪʃ(ə)n] n. 阵型，编队，队形【词频 3046】【X9M3】 star-formation [stɑː-fɔː&rsquo;meɪʃ(ə)n] n. 星形队形【词频 49208】 formative [&lsquo;fɔːmətɪv] adj. 形成的；造型的【词频 12146】
+formal [&lsquo;fɔːm(ə)l] adj. 正式的【词频 2225】【B1M2】【B4M3】 formally [&lsquo;fɔːməlɪ] adv. 正式地；形式上【词频 5601】
+informal [ɪn&rsquo;fɔːm(ə)l] adj. 非正式的【词频 4570】【B4M3】【X6M1】
+informally [in&rsquo;fɔ:məli] adv. 非正式地；不拘礼节地【词频 14166】formalize [&lsquo;fɔːm(ə)laɪz] vt. 使形式化；使正式【词频 18262】 formality [fɔ&rsquo;mæləti] n. 礼节；拘谨；仪式【词频 12336】
+life-form [laɪf-fɔːm] n. 生物【词频 22024】
+formalism [&lsquo;fɔːm(ə)lɪz(ə)m] n. 形式主义；形式体系【词频 23733】 formalized [&lsquo;fɔːm(ə)laɪzd] adj. 形式化的；正式的【词频 25006】 waveform [&lsquo;wevfɔrm] n. [物][电子] 波形【词频 25007】malformation [mælfɔː&rsquo;meɪʃ(ə)n] n. 畸形；变形【词频 25033】 informality [,ɪnfɔː&rsquo;mælɪtɪ] n. 非正式；不拘礼节【词频 25995】
+formless [&lsquo;fɔːmlɪs] adj. 没有形状的；无定形的；形体不明的【词频 26562】 free-form [&lsquo;fri:fɔ:m] adj. 自由形态的【词频 28600】
+unformed [ʌn&rsquo;fɔːmd] adj. 未成形的；未充分发展的【词频 29137】 landform [&lsquo;læn(d)fɔːm] n. [地理] 地形【词频 29814】
+form-fitting [fɔːm- &lsquo;fɪtɪŋ] adj. 适体的，合身的【词频 29845】 star-forming [stɑː-&lsquo;fɔːmɪŋ] n. 产星【词频 33804】
+malformed [,mæl&rsquo;fɔrmd] adj. 畸形的，难看的【词频 34055】forme [fɔ:m] n. [印刷] 印版【词频 35139】
+nonformal [nɒn-&lsquo;fɔːm(ə)l] adj. 非正式的【词频 36701】 formed [fɔ:md] adj. 成形的，成形【词频 38313】
+well-formed [&lsquo;wel&rsquo;fɔ:md] adj. 身材苗条的；结构良好的；符合语法规则的【词频 38602】formalization [,fɔməlɪ&rsquo;zeʃən] n. 形式化；礼仪化【词频 38747】
+formalistic [,fɔrml&rsquo;ɪstɪk] adj. 形式主义的，呆板的【词频 39388】
+forming [&lsquo;fɔːmɪŋ] n. 形成【词频 40092】
+semiformal [,semɪ&rsquo;fɔːməl] adj. 半正式的【词频 44596】
+habit-forming [&lsquo;hæbit,fɔ:miŋ] adj. （尤指药物毒品等）易上瘾的；易成习惯的【词频 45309】formalist [fɔ:&rsquo;mælist] n. 拘泥形式的人；形式主义者 adj. 形式主义的；死板的【词频 45577】formlessness [&lsquo;fɔːmlɪsnis] n. 无形【词频 46501】assume formlessness  无招胜有招
+long-form [lɒŋ-fɔːm] n. 详细格式 [计] 长格式【词频 48598】 newly-formed [&lsquo;njuːlɪ-fɔ:md] adj. 成形的，成形【词频 48931】  multiform [&lsquo;mʌltɪfɔːm] adj. 多样的；多种形式的【词频 57557】 informal-sector [ɪn&rsquo;fɔːm(ə)l-&lsquo;sektə] n. 非正式部门【词频 59257】 smog-forming [smɒg-&lsquo;fɔːmɪŋ] adj. 形成烟雾的【词频 56239】
+cuneiform [&lsquo;kjuːnɪfɔːm] adj. 楔形的；楔形文字的；楔状骨的 n. 楔形文字；楔状骨【词频 36587】 cruciform [&lsquo;kruːsɪfɔːm] adj. 十字形的；十字架状的 n. 十字形【词频 37117】
+spongiform [&lsquo;spʌndʒɪfɔrm] adj. 海绵状组织的【词频 38336】 half-formed [hɑːf-fɔ:md] adj. 半成型的【词频 43494】
+cribriform [&lsquo;krɪbrɪfɔːm] adj. 有小孔的；[植][解剖] 筛状的【词频 54021】
+short-form [ʃɔːt-fɔːm] n. 简易格式【词频 43731】 piriform [&lsquo;pirə,fɔ:m] adj. 梨形的【词频 55691】</li>
+</ul>
+<h5 id="form_1">form<a class="headerlink" href="#form_1" title="Permanent link"></a></h5>
+<ul>
+<li>形式 in the form of</li>
+<li>形成 form a circle   form the habit</li>
+<li>竞技状态 show good form</li>
+<li>表格 application form</li>
+<li>take form 成形</li>
+<li>behave true to form 和以前一样</li>
+</ul>
+<h5 id="waveform">waveform<a class="headerlink" href="#waveform" title="Permanent link"></a></h5>
+<ul>
+<li>波形的</li>
+</ul>
+<h5 id="lifeform">lifeform<a class="headerlink" href="#lifeform" title="Permanent link"></a></h5>
+<ul>
+<li>生命</li>
+</ul>
+<h5 id="short-form">short-form<a class="headerlink" href="#short-form" title="Permanent link"></a></h5>
+<ul>
+<li>短格式</li>
+</ul>
+<h5 id="long-form">long-form<a class="headerlink" href="#long-form" title="Permanent link"></a></h5>
+<ul>
+<li>长格式</li>
+</ul>
+<h5 id="spongiform">spongiform<a class="headerlink" href="#spongiform" title="Permanent link"></a></h5>
+<ul>
+<li>海绵状的</li>
+</ul>
+<h5 id="cuneiform">cuneiform<a class="headerlink" href="#cuneiform" title="Permanent link"></a></h5>
+<ul>
+<li>楔形的</li>
+</ul>
+<h5 id="cruciform">cruciform<a class="headerlink" href="#cruciform" title="Permanent link"></a></h5>
+<ul>
+<li>十字形的</li>
+</ul>
+<h5 id="priiform">priiform<a class="headerlink" href="#priiform" title="Permanent link"></a></h5>
+<ul>
+<li>梨形的</li>
+</ul>
+<h5 id="free-form">free-form<a class="headerlink" href="#free-form" title="Permanent link"></a></h5>
+<ul>
+<li>自由形状的</li>
+</ul>
+<h5 id="landform">landform<a class="headerlink" href="#landform" title="Permanent link"></a></h5>
+<ul>
+<li>地形</li>
+</ul>
+<h5 id="form-fitting">form-fitting<a class="headerlink" href="#form-fitting" title="Permanent link"></a></h5>
+<ul>
+<li>合身的</li>
+</ul>
+<h5 id="formed">formed<a class="headerlink" href="#formed" title="Permanent link"></a></h5>
+<ul>
+<li>成形的</li>
+</ul>
+<h5 id="unformed">unformed<a class="headerlink" href="#unformed" title="Permanent link"></a></h5>
+<ul>
+<li>未成形的</li>
+</ul>
+<h5 id="malformed">malformed<a class="headerlink" href="#malformed" title="Permanent link"></a></h5>
+<ul>
+<li>畸形的</li>
+</ul>
+<h5 id="malformation">malformation<a class="headerlink" href="#malformation" title="Permanent link"></a></h5>
+<ul>
+<li>畸形</li>
+</ul>
+<h5 id="well-formed">well-formed<a class="headerlink" href="#well-formed" title="Permanent link"></a></h5>
+<ul>
+<li>身材好的</li>
+<li>格式良好的</li>
+</ul>
+<h5 id="newly-formed">newly-formed<a class="headerlink" href="#newly-formed" title="Permanent link"></a></h5>
+<ul>
+<li>新形成的</li>
+</ul>
+<h5 id="multiformed">multiformed<a class="headerlink" href="#multiformed" title="Permanent link"></a></h5>
+<ul>
+<li>多形式的</li>
+</ul>
+<h5 id="half-formed">half-formed<a class="headerlink" href="#half-formed" title="Permanent link"></a></h5>
+<ul>
+<li>半成型的</li>
+</ul>
+<h5 id="formless">formless<a class="headerlink" href="#formless" title="Permanent link"></a></h5>
+<ul>
+<li>无定形的</li>
+</ul>
+<h5 id="formlessness">formlessness<a class="headerlink" href="#formlessness" title="Permanent link"></a></h5>
+<ul>
+<li>无定形</li>
+</ul>
+<h5 id="forming">forming<a class="headerlink" href="#forming" title="Permanent link"></a></h5>
+<ul>
+<li>成形</li>
+</ul>
+<h5 id="star-forming">star-forming<a class="headerlink" href="#star-forming" title="Permanent link"></a></h5>
+<ul>
+<li>恒星形成</li>
+</ul>
+<h5 id="smog-forming">smog-forming<a class="headerlink" href="#smog-forming" title="Permanent link"></a></h5>
+<ul>
+<li>形成烟雾的</li>
+</ul>
+<h5 id="habit-forming">habit-forming<a class="headerlink" href="#habit-forming" title="Permanent link"></a></h5>
+<ul>
+<li>容易上瘾的</li>
+</ul>
+<h5 id="formal">formal<a class="headerlink" href="#formal" title="Permanent link"></a></h5>
+<ul>
+<li>正式的</li>
+<li>官方的</li>
+<li>正规的</li>
+</ul>
+<h5 id="formally">formally<a class="headerlink" href="#formally" title="Permanent link"></a></h5>
+<ul>
+<li>正式的</li>
+</ul>
+<h5 id="semiformal">semiformal<a class="headerlink" href="#semiformal" title="Permanent link"></a></h5>
+<ul>
+<li>半正式的</li>
+</ul>
+<h5 id="nonformal">nonformal<a class="headerlink" href="#nonformal" title="Permanent link"></a></h5>
+<ul>
+<li>非正式的</li>
+</ul>
+<h5 id="informal">informal<a class="headerlink" href="#informal" title="Permanent link"></a></h5>
+<ul>
+<li>非正式的</li>
+</ul>
+<h5 id="informally">informally<a class="headerlink" href="#informally" title="Permanent link"></a></h5>
+<ul>
+<li>非正式地</li>
+</ul>
+<h5 id="informality">informality<a class="headerlink" href="#informality" title="Permanent link"></a></h5>
+<ul>
+<li>非正式，随意</li>
+</ul>
+<h5 id="informal-sector">informal-sector<a class="headerlink" href="#informal-sector" title="Permanent link"></a></h5>
+<ul>
+<li>非正式部门</li>
+</ul>
+<h5 id="formality">formality<a class="headerlink" href="#formality" title="Permanent link"></a></h5>
+<ul>
+<li>形式，拘谨</li>
+<li>正式手续</li>
+</ul>
+<h5 id="formalism">formalism<a class="headerlink" href="#formalism" title="Permanent link"></a></h5>
+<ul>
+<li>形式主义</li>
+</ul>
+<h5 id="formalist">formalist<a class="headerlink" href="#formalist" title="Permanent link"></a></h5>
+<ul>
+<li>形式主义者</li>
+</ul>
+<h5 id="formalistic">formalistic<a class="headerlink" href="#formalistic" title="Permanent link"></a></h5>
+<ul>
+<li>形式主义的</li>
+</ul>
+<h5 id="formalize">formalize<a class="headerlink" href="#formalize" title="Permanent link"></a></h5>
+<ul>
+<li>正式化</li>
+</ul>
+<h5 id="formalized">formalized<a class="headerlink" href="#formalized" title="Permanent link"></a></h5>
+<ul>
+<li>形式化的</li>
+</ul>
+<h5 id="formalization">formalization<a class="headerlink" href="#formalization" title="Permanent link"></a></h5>
+<ul>
+<li>正式化</li>
+<li>规范化</li>
+</ul>
+<h5 id="formative">formative<a class="headerlink" href="#formative" title="Permanent link"></a></h5>
+<ul>
+<li>形成性格的</li>
+</ul>
+<h5 id="forme">forme<a class="headerlink" href="#forme" title="Permanent link"></a></h5>
+<ul>
+<li>印版</li>
+</ul>
+<h5 id="formation">formation<a class="headerlink" href="#formation" title="Permanent link"></a></h5>
+<ul>
+<li>the formation of 形成</li>
+<li>队列 V-formation</li>
+</ul>
+<h5 id="star-formation">star-formation<a class="headerlink" href="#star-formation" title="Permanent link"></a></h5>
+<ul>
+<li>星形</li>
+</ul>
+<h3 id="inform">inform<a class="headerlink" href="#inform" title="Permanent link"></a></h3>
+<ul>
+<li>使动in，使成形→信息加工→通知
+inform [ɪn&rsquo;fɔːm] vt. 通知；告诉；报告【词频 2190】
+informed [ɪn&rsquo;fɔːmd] adj. 消息灵通的；见多识广的【词频 7870】 uninformed [ʌnɪn&rsquo;fɔːmd] adj. 无知的；未被通知的【词频】 informant [ɪn&rsquo;fɔːmənt] n. 告密者；提供消息者【词频 7217】
+cross-informant [krɔs-ɪn&rsquo;fɔːmənt] pref. 横跨；相反；十字形【词频 59766】
+informer [ɪn&rsquo;fɔːmə] n. 告密者；通知者【词频 18229】
+information [ɪnfə&rsquo;meɪʃ(ə)n] n. 信息【词频 314】【B1M1】 informative [ɪn&rsquo;fɔːmətɪv] adj. 情报的【词频 11051】
+informational [,ɪnfɚ&rsquo;meʃənəl] adj. 情报的；报告的【词频 14000】 bioinformatician [baɪ&rsquo;ɒɪnfə&rsquo;mətiʃ(ə)n] n. 生物信息学（研究）者【B5M2】 disinformation [,dɪsɪnfə&rsquo;meɪʃ(ə)n] n. 故意的假情报；虚假信息【词频 21908】
+well-informed [&lsquo;welin&rsquo;fɔ:md] adj. 消息灵通的；见多识广的；熟悉的；博学的【词频 22430】misinform [mɪsɪn&rsquo;fɔːm] vt. 误传；提供错误消息【词频 24012】
+misinformed [mɪsɪn&rsquo;fɔːm] vt. 误传；提供错误消息【词频 45452】 misinformation [,mɪsɪnfə&rsquo;meʃən] n. 误报；错误的消息【词频 15377】 informing [ɪn&rsquo;fɔrm] adj. 增长见闻的；提供情报的；鼓舞的【词频 32956】
+information-based [ɪnfə&rsquo;meɪʃ(ə)n-beɪst] adj. 信息化的；以信息为基础的【词频 39582】 information-gathering [ɪnfə&rsquo;meɪʃ(ə)n-&lsquo;gæð( ə)rɪŋ] n. 信息收（搜）集；情报收集【词频 42670】 uninformative [ʌnɪn&rsquo;fɔːmətɪv] adj. 不提供信息的；不增长见闻的【词频 43128】
+informatics [,ɪnfə&rsquo;mætɪks] n. [图情][计] 信息学；情报学（复数用作单数）【词频 44208】 information-rich [ɪnfə&rsquo;meɪʃ(ə)n-rɪtʃ] adj. 信息丰富的【词频 45727】
+information-age [ɪnfə&rsquo;meɪʃ(ə)n-eɪdʒ] n. 信息时代【词频 48610】 bioinformatics [,baɪəʊ,ɪnfə&rsquo;mætɪks] n. 生物信息学；生物资讯【词频 51042】 better-informed [&lsquo;betə-ɪn&rsquo;fɔːmd] adj. 消息灵通的，更明智的【词频 51860】
+information-sharing [ɪnfə&rsquo;meɪʃ(ə)n-&lsquo;ʃɛrɪŋ] n. 信息共享；资讯分享【词频 53392】 informed-consent [ɪn&rsquo;fɔːmd-kən&rsquo;sent] n. 知情同意，知会同意；知后同意【词频 54473】 best-informed [best-ɪn&rsquo;fɔːmd] adj. 消息灵通的【词频 57826】
+informativeness [ɪn&rsquo;fɔːmətɪvnis] n. 信息量；忠实度【词频 59407】
+information-processing [ɪnfə&rsquo;meɪʃ(ə)n-prəˈsesɪŋ] n. 信息处理；信息加工；情报整理【词频 34525】 information-technology [ɪnfə&rsquo;meɪʃ(ə)n-tek&rsquo;nɒlədʒɪ] n. [计][通信] 信息技术【词频 35637】
+ill-informed [ɪl-ɪn&rsquo;fɔːmd] adj. 所知不多的；消息不灵通的【词频 34109】</li>
+</ul>
+<h5 id="inform_1">inform<a class="headerlink" href="#inform_1" title="Permanent link"></a></h5>
+<ul>
+<li>inform sb. of sth. 通知某人某事</li>
+<li>inform on sb. 检举某人</li>
+<li>be informed by 渗透着（思想，品质）</li>
+</ul>
+<h5 id="informed">informed<a class="headerlink" href="#informed" title="Permanent link"></a></h5>
+<ul>
+<li>消息灵通的 informed people 知情人</li>
+<li>消息可靠的 informed sources 可靠消息</li>
+<li>决策明智的 informed choices 明智选择</li>
+</ul>
+<h5 id="better-informed">better-informed<a class="headerlink" href="#better-informed" title="Permanent link"></a></h5>
+<ul>
+<li>消息灵通的</li>
+</ul>
+<h5 id="best-informed">best-informed<a class="headerlink" href="#best-informed" title="Permanent link"></a></h5>
+<ul>
+<li>消息灵通的</li>
+</ul>
+<h5 id="well-informed">well-informed<a class="headerlink" href="#well-informed" title="Permanent link"></a></h5>
+<ul>
+<li>消息灵通的</li>
+</ul>
+<h5 id="ill-informed">ill-informed<a class="headerlink" href="#ill-informed" title="Permanent link"></a></h5>
+<ul>
+<li>消息不通的</li>
+</ul>
+<h5 id="uninformed">uninformed<a class="headerlink" href="#uninformed" title="Permanent link"></a></h5>
+<ul>
+<li>未被通知的，不知情的</li>
+</ul>
+<h5 id="uninformative">uninformative<a class="headerlink" href="#uninformative" title="Permanent link"></a></h5>
+<ul>
+<li>不提供信息的</li>
+</ul>
+<h5 id="informed-consent">informed-consent<a class="headerlink" href="#informed-consent" title="Permanent link"></a></h5>
+<ul>
+<li>知后同意</li>
+</ul>
+<h5 id="informing">informing<a class="headerlink" href="#informing" title="Permanent link"></a></h5>
+<ul>
+<li>增长见识的</li>
+</ul>
+<h5 id="informant">informant<a class="headerlink" href="#informant" title="Permanent link"></a></h5>
+<ul>
+<li>信息提供者，告密者</li>
+</ul>
+<h5 id="cross-informant">cross-informant<a class="headerlink" href="#cross-informant" title="Permanent link"></a></h5>
+<ul>
+<li>双面间谍</li>
+</ul>
+<h5 id="informer">informer<a class="headerlink" href="#informer" title="Permanent link"></a></h5>
+<ul>
+<li>告密者</li>
+</ul>
+<h5 id="information">information<a class="headerlink" href="#information" title="Permanent link"></a></h5>
+<ul>
+<li>信息</li>
+</ul>
+<h5 id="info">info<a class="headerlink" href="#info" title="Permanent link"></a></h5>
+<ul>
+<li>信息(简写)</li>
+</ul>
+<h5 id="information-based">information-based<a class="headerlink" href="#information-based" title="Permanent link"></a></h5>
+<ul>
+<li>基于信息的</li>
+</ul>
+<h5 id="information-gathering">information-gathering<a class="headerlink" href="#information-gathering" title="Permanent link"></a></h5>
+<ul>
+<li>信息收集的</li>
+</ul>
+<h5 id="information-rich">information-rich<a class="headerlink" href="#information-rich" title="Permanent link"></a></h5>
+<ul>
+<li>信息丰富的</li>
+</ul>
+<h5 id="information-age">information-age<a class="headerlink" href="#information-age" title="Permanent link"></a></h5>
+<ul>
+<li>信息时代</li>
+</ul>
+<h5 id="information-sharing">information-sharing<a class="headerlink" href="#information-sharing" title="Permanent link"></a></h5>
+<ul>
+<li>信息分享</li>
+</ul>
+<h5 id="information-processing">information-processing<a class="headerlink" href="#information-processing" title="Permanent link"></a></h5>
+<ul>
+<li>信息处理</li>
+</ul>
+<h5 id="information-technology">information-technology<a class="headerlink" href="#information-technology" title="Permanent link"></a></h5>
+<ul>
+<li>信息技术 IT</li>
+</ul>
+<h5 id="informational">informational<a class="headerlink" href="#informational" title="Permanent link"></a></h5>
+<ul>
+<li>信息的，情报的</li>
+</ul>
+<h5 id="informative">informative<a class="headerlink" href="#informative" title="Permanent link"></a></h5>
+<ul>
+<li>增长见识的</li>
+</ul>
+<h5 id="informativeness">informativeness<a class="headerlink" href="#informativeness" title="Permanent link"></a></h5>
+<ul>
+<li>信息量</li>
+</ul>
+<h5 id="informatics">informatics<a class="headerlink" href="#informatics" title="Permanent link"></a></h5>
+<ul>
+<li>信息学</li>
+</ul>
+<h5 id="bio-informatics">bio-informatics<a class="headerlink" href="#bio-informatics" title="Permanent link"></a></h5>
+<ul>
+<li>生物信息学</li>
+</ul>
+<h5 id="bio-informatician">bio-informatician<a class="headerlink" href="#bio-informatician" title="Permanent link"></a></h5>
+<ul>
+<li>生物信息学家</li>
+</ul>
+<h5 id="disinformation">disinformation<a class="headerlink" href="#disinformation" title="Permanent link"></a></h5>
+<ul>
+<li>虚假情报</li>
+</ul>
+<h5 id="misinform">misinform<a class="headerlink" href="#misinform" title="Permanent link"></a></h5>
+<ul>
+<li>误导</li>
+</ul>
+<h5 id="misinformed">misinformed<a class="headerlink" href="#misinformed" title="Permanent link"></a></h5>
+<ul>
+<li>误导的</li>
+</ul>
+<h5 id="misinformation">misinformation<a class="headerlink" href="#misinformation" title="Permanent link"></a></h5>
+<ul>
+<li>误导</li>
+</ul>
+<h3 id="perform">perform<a class="headerlink" href="#perform" title="Permanent link"></a></h3>
+<ul>
+<li>完全成形，执行
+perform [pə&rsquo;fɔːm] vi. 表现 vt. 预先形成 n. 粗加工的成品【词频 954，45736】【B5M5】 performance [pə&rsquo;fɔːm(ə)ns] n. 表演【词频 675】【B4M3】
+performative [pə&rsquo;fɔːmətɪv] adj. 表述行为的 n. 述行成分，述行语【词频 21489】 performer [pə&rsquo;fɔːmə(r)] n. 表演者【词频 3993】【B4M3】
+performing [pə&rsquo;fɔːmɪŋ] adj. 表演的；履行的【词频 8594】 preformed [&lsquo;pri:&rsquo;fɔ:md] adj. 预成型的，预制成的【词频 37089】outperform [aʊtpə&rsquo;fɔːm] vt. 胜过；做得比……好【词频 13127】
+high-performance [,haɪ&rsquo;pɚ&rsquo;fɔrməns] adj. 高性能的；高效能的【词频 14654】 high-performing [haɪ-pə&rsquo;fɔːmɪŋ] n. 高绩效；高性能【词频 36787】
+performance-enhancing [pə&rsquo;fɔːm(ə)ns-ɪn&rsquo;hɑːnsɪŋ] adj. 增强性能的【词频 20644】 performance-based [pə&rsquo;fɔːm(ə)ns-beɪst] adj. 绩效为基础的【词频 24058】
+best-performing [[best-pə&rsquo;fɔːmɪŋ] n. 表现最好的【词频 36290】
+performance-oriented [pə&rsquo;fɔːm(ə)ns-&lsquo;orɪɛntɪd] 以绩效为导向；绩效导向；绩效型【词频 40570】 performance-related [pə&rsquo;fɔːm(ə)ns- rɪ&rsquo;leɪtɪd] adj. 性能相关的；绩效相关的【词频 41165】
+pay-for-performance [peɪ-fɔ:(r)-pə&rsquo;fɔːm(ə)ns] n. 绩效薪酬【词频 42964】 performativity [pə&rsquo;fɔːmətɪviti] n. 表演性【词频 44622】
+underperforming [,ʌndɚpɚ&rsquo;fɔrming] vt. （股票等）运作差于（一般市场价格）
+vi. 表现不佳；工作不如预期（或同行）【词频 46572】
+underperformance [,ʌndəpə&rsquo;fɔ:m(ə)ns] n. 新股弱势；新股偏弱现象【词频 47795】
+non-performing [nʌn-pə&rsquo;fɔːmɪŋ] adj. 不履约【词频 48077】
+worst-performing [wə:st-pə&rsquo;fɔːmɪŋ] adj. 表现最差的【词频 49132】
+pre-performance [priː-pə&rsquo;fɔːm(ə)ns] n. 性能；绩效；表演；执行；表现【词频 52598】 nonperformance [,nɒnpə&rsquo;fɔːməns] n. 不履行，不实行【词频 53073】
+post-performance [pəust-pə&rsquo;fɔːm(ə)ns] n. 岗位绩效【词频 56011】 poor-performing [pʊə-pə&rsquo;fɔːmɪŋ] adj. 劣质的【词频 56727】
+low-performing [ləʊ-pə&rsquo;fɔːmɪŋ] adj. 薄弱的；低效率的【词频 32714】
+top-performing [tɒp-pə&rsquo;fɔːmɪŋ] adj. 表现最好的；顶级表演的【词频 33216】 </li>
+</ul>
+<h5 id="perform_1">perform<a class="headerlink" href="#perform_1" title="Permanent link"></a></h5>
+<ul>
+<li>执行：perform miracles 创造奇迹</li>
+<li>起作用：perform a different function 起不同作用</li>
+<li>演奏：perform classic music</li>
+<li>perform well/badly：表现好/不好</li>
+</ul>
+<h5 id="performance">performance<a class="headerlink" href="#performance" title="Permanent link"></a></h5>
+<ul>
+<li>演奏</li>
+<li>表现 the poor performance 业绩不佳</li>
+<li>the performance of sth.：执行</li>
+</ul>
+<h5 id="performance-art">performance art<a class="headerlink" href="#performance-art" title="Permanent link"></a></h5>
+<ul>
+<li>表演艺术</li>
+</ul>
+<h5 id="performance-related-pay">performance-related pay<a class="headerlink" href="#performance-related-pay" title="Permanent link"></a></h5>
+<ul>
+<li>绩效工资</li>
+</ul>
+<h5 id="pay-for-performance">pay-for-performance<a class="headerlink" href="#pay-for-performance" title="Permanent link"></a></h5>
+<ul>
+<li>绩效工资</li>
+</ul>
+<h5 id="high-performance">high-performance<a class="headerlink" href="#high-performance" title="Permanent link"></a></h5>
+<ul>
+<li>高性能的</li>
+</ul>
+<h5 id="performance-oriented">performance-oriented<a class="headerlink" href="#performance-oriented" title="Permanent link"></a></h5>
+<ul>
+<li>性能导向的</li>
+</ul>
+<h5 id="performance-based">performance-based<a class="headerlink" href="#performance-based" title="Permanent link"></a></h5>
+<ul>
+<li>以表现为依据的</li>
+</ul>
+<h5 id="performance-enhancing">performance-enhancing<a class="headerlink" href="#performance-enhancing" title="Permanent link"></a></h5>
+<ul>
+<li>增强表现的</li>
+</ul>
+<h5 id="performing">performing<a class="headerlink" href="#performing" title="Permanent link"></a></h5>
+<ul>
+<li>表现的</li>
+</ul>
+<h5 id="performing-arts">performing arts<a class="headerlink" href="#performing-arts" title="Permanent link"></a></h5>
+<ul>
+<li>表演艺术</li>
+</ul>
+<h5 id="best-performing">best-performing<a class="headerlink" href="#best-performing" title="Permanent link"></a></h5>
+<ul>
+<li>表现最佳的</li>
+</ul>
+<h5 id="performer">performer<a class="headerlink" href="#performer" title="Permanent link"></a></h5>
+<ul>
+<li>演员</li>
+</ul>
+<h5 id="performed">performed<a class="headerlink" href="#performed" title="Permanent link"></a></h5>
+<ul>
+<li>已完成的</li>
+</ul>
+<h5 id="performativity">performativity<a class="headerlink" href="#performativity" title="Permanent link"></a></h5>
+<ul>
+<li>表演性</li>
+</ul>
+<h5 id="outperform">outperform<a class="headerlink" href="#outperform" title="Permanent link"></a></h5>
+<ul>
+<li>跑赢，胜出</li>
+</ul>
+<h5 id="underperform">underperform<a class="headerlink" href="#underperform" title="Permanent link"></a></h5>
+<ul>
+<li>跑输，弱于预期</li>
+</ul>
+<h5 id="underperforming">underperforming<a class="headerlink" href="#underperforming" title="Permanent link"></a></h5>
+<ul>
+<li>表现不佳的</li>
+</ul>
+<h5 id="underperformance">underperformance<a class="headerlink" href="#underperformance" title="Permanent link"></a></h5>
+<ul>
+<li>表现不佳</li>
+</ul>
+<h5 id="poor-performing">poor-performing<a class="headerlink" href="#poor-performing" title="Permanent link"></a></h5>
+<ul>
+<li>表现欠佳的</li>
+</ul>
+<h5 id="low-performing">low-performing<a class="headerlink" href="#low-performing" title="Permanent link"></a></h5>
+<ul>
+<li>低效的</li>
+</ul>
+<h5 id="top-performing">top-performing<a class="headerlink" href="#top-performing" title="Permanent link"></a></h5>
+<ul>
+<li>表现最好的</li>
+</ul>
+<h5 id="non-performing">non-performing<a class="headerlink" href="#non-performing" title="Permanent link"></a></h5>
+<ul>
+<li>不履约的</li>
+<li>non-performing loan不良贷款</li>
+</ul>
+<h5 id="non-performance">non-performance<a class="headerlink" href="#non-performance" title="Permanent link"></a></h5>
+<ul>
+<li>不履约</li>
+</ul>
+<h5 id="pre-performance">pre-performance<a class="headerlink" href="#pre-performance" title="Permanent link"></a></h5>
+<ul>
+<li>演出前</li>
+</ul>
+<h5 id="post-performance">post-performance<a class="headerlink" href="#post-performance" title="Permanent link"></a></h5>
+<ul>
+<li>演出后</li>
+</ul>
+<h3 id="formula">formula<a class="headerlink" href="#formula" title="Permanent link"></a></h3>
+<ul>
+<li>公式
+formula [&lsquo;fɔːmjʊlə] n. 法则；原则；数学公式【词频 3362】【X6M1】 formulate [&lsquo;fɔːmjʊleɪt] vt. 规划；用公式表示【词频 5918】
+formulation [fɔːmjʊ&rsquo;leɪʃn] n. 构想，规划；公式化【词频 7442】 formulated [&lsquo;fɔːmjʊleɪtid] adj. 按配方制造的【词频 56130】
+formulaic [,fɔːmjʊ&rsquo;leɪɪk] adj. 公式化的；刻板的；套话堆砌的【词频 21978】 reformulate [,ri&rsquo;fɔrmjulet] vt. 再用形式表示
+reformulated [riːˈfɔːmjʊˌleɪtid] adj. 再阐述【词频 28402】 reformulation [,ri:fɔ:mju&rsquo;leiʃən] n. 再形成【词频 30472】
+formulary [&lsquo;fɔːmjʊlərɪ] n. 公式集；处方一览表；套话 adj. 规定的；公式的；药方的【词频 36619】 
+thinking formulary 思维定式
+formula-fed [&lsquo;fɔːmjʊlə-fed] n. 配制饲料；配合饲料【词频 53957】</li>
+</ul>
+<h5 id="formula_1">formula<a class="headerlink" href="#formula_1" title="Permanent link"></a></h5>
+<ul>
+<li>公式</li>
+<li>方案</li>
+</ul>
+<h5 id="formulaic">formulaic<a class="headerlink" href="#formulaic" title="Permanent link"></a></h5>
+<ul>
+<li>公式化的</li>
+</ul>
+<h5 id="formulate">formulate<a class="headerlink" href="#formulate" title="Permanent link"></a></h5>
+<ul>
+<li>规划</li>
+<li>阐述</li>
+</ul>
+<h5 id="formulation">formulation<a class="headerlink" href="#formulation" title="Permanent link"></a></h5>
+<ul>
+<li>配方</li>
+<li>阐述</li>
+<li>规划</li>
+</ul>
+<h5 id="formulated">formulated<a class="headerlink" href="#formulated" title="Permanent link"></a></h5>
+<ul>
+<li>按照配方制造的</li>
+</ul>
+<h5 id="reformulate">reformulate<a class="headerlink" href="#reformulate" title="Permanent link"></a></h5>
+<ul>
+<li>重新制定</li>
+</ul>
+<h5 id="reformulated">reformulated<a class="headerlink" href="#reformulated" title="Permanent link"></a></h5>
+<ul>
+<li>重新制定的</li>
+</ul>
+<h5 id="reformulation">reformulation<a class="headerlink" href="#reformulation" title="Permanent link"></a></h5>
+<ul>
+<li>重新制定</li>
+</ul>
+<h5 id="formulary">formulary<a class="headerlink" href="#formulary" title="Permanent link"></a></h5>
+<ul>
+<li>公式集</li>
+</ul>
+<h5 id="formula-fed">formula-fed<a class="headerlink" href="#formula-fed" title="Permanent link"></a></h5>
+<ul>
+<li>按照配方奶喂养的</li>
+</ul>
+<h3 id="format">format<a class="headerlink" href="#format" title="Permanent link"></a></h3>
+<ul>
+<li>格式化
+format [&lsquo;fɔːmæt] n. （节目、计划等的）构成，安排 vt. 使格式化【词频 3758，15141】【X6M2】 reformat [,ri&rsquo;fɔrmæt] vt. 重定格式【词频 42037】
+formatting [fɔː&rsquo;meɪtɪŋ] n. 格式化【词频 41555】
+large-format [lɑːdʒ-&lsquo;fɔːmæt] n. 大篇幅【词频 35257】</li>
+</ul>
+<h5 id="format_1">format<a class="headerlink" href="#format_1" title="Permanent link"></a></h5>
+<ul>
+<li>格式</li>
+</ul>
+<h5 id="formatting">formatting<a class="headerlink" href="#formatting" title="Permanent link"></a></h5>
+<ul>
+<li>格式化</li>
+</ul>
+<h5 id="reformat">reformat<a class="headerlink" href="#reformat" title="Permanent link"></a></h5>
+<ul>
+<li>重新格式化</li>
+</ul>
+<h5 id="large-format">large-format<a class="headerlink" href="#large-format" title="Permanent link"></a></h5>
+<ul>
+<li>大格式的</li>
+</ul>
+<h3 id="platform">platform<a class="headerlink" href="#platform" title="Permanent link"></a></h3>
+<ul>
+<li>plat，小块地，平台
+platform [&lsquo;plætfɔːm] n. 平台【词频 2823】【X8M1】cross-platform [krɒs-&lsquo;plætfɔːm] n. 跨平台【词频 54892】</li>
+</ul>
+<h5 id="platform_1">platform<a class="headerlink" href="#platform_1" title="Permanent link"></a></h5>
+<ul>
+<li>平台，讲台，站台</li>
+<li>纲领</li>
+</ul>
+<h5 id="cross-platform">cross-platform<a class="headerlink" href="#cross-platform" title="Permanent link"></a></h5>
+<ul>
+<li>跨平台</li>
+</ul>
+<h3 id="former">former<a class="headerlink" href="#former" title="Permanent link"></a></h3>
+<ul>
+<li>模板是从前的
+former [&lsquo;fɔːmə] adj. 从前的，前者的；前任的 n. 模型，样板；起形成作用的人【词频 442，43709】formerly [&lsquo;fɔːməlɪ] adv. 以前；原来【词频 4728】</li>
+</ul>
+<h5 id="former_1">former<a class="headerlink" href="#former_1" title="Permanent link"></a></h5>
+<ul>
+<li>从前的，the former 前者</li>
+</ul>
+<h5 id="formerly">formerly<a class="headerlink" href="#formerly" title="Permanent link"></a></h5>
+<ul>
+<li>从前 </li>
+</ul>
+<h3 id="uniform">uniform<a class="headerlink" href="#uniform" title="Permanent link"></a></h3>
+<ul>
+<li>制服，统一形式
+uniform [&lsquo;juːnɪfɔːm] adj. 统一的；一致的 n. 制服 vt. 使穿制服；使成一样【词频 3062，6071】 uniformed [&lsquo;juːnɪfɔːmd] adj. 穿着制服的【词频 9938，18487】
+uniformity [juːnɪ&rsquo;fɔːmɪtɪ] n. 均匀性；一致；同样【词频 14419】 uniformly [&lsquo;ju:nɪfɔ:mlɪ] adv. 一致地【词频 11448】
+uniformitarian [&lsquo;juːnɪ,fɔːmɪ&rsquo;teərɪən] adj. 均变论的；均变说的 n. 均变论者【词频 59748】 nonuniform [nɔn&rsquo;ju:nifɔ:m] adj. 不均匀的；不一致的，不统一的【词频 40522】
+uniformitarianism  美 /,jʊnə,fɔrmə&rsquo;tɛrɪən,ɪzm/  n.均变论</li>
+</ul>
+<h5 id="uniform_1">uniform<a class="headerlink" href="#uniform_1" title="Permanent link"></a></h5>
+<ul>
+<li>制服</li>
+<li>均匀的</li>
+</ul>
+<h5 id="uniformed">uniformed<a class="headerlink" href="#uniformed" title="Permanent link"></a></h5>
+<ul>
+<li>穿制服的</li>
+</ul>
+<h5 id="uniformity">uniformity<a class="headerlink" href="#uniformity" title="Permanent link"></a></h5>
+<ul>
+<li>一致</li>
+</ul>
+<h5 id="uniformly">uniformly<a class="headerlink" href="#uniformly" title="Permanent link"></a></h5>
+<ul>
+<li>一致地</li>
+</ul>
+<h5 id="uniformitarian">uniformitarian<a class="headerlink" href="#uniformitarian" title="Permanent link"></a></h5>
+<ul>
+<li>均变论的</li>
+<li>均变论者</li>
+</ul>
+<h5 id="uniformitarianism">uniformitarianism<a class="headerlink" href="#uniformitarianism" title="Permanent link"></a></h5>
+<ul>
+<li>均变论</li>
+</ul>
+<h5 id="nonuniform">nonuniform<a class="headerlink" href="#nonuniform" title="Permanent link"></a></h5>
+<ul>
+<li>不均匀的</li>
+</ul>
+<h3 id="reform">reform<a class="headerlink" href="#reform" title="Permanent link"></a></h3>
+<ul>
+<li>再一次形成 改革
+reform [rɪ&rsquo;fɔːm] n. 改革，改良；改正 vt. 改革，革新；重新组成【词频 1113，5938】 reformer [rɪ&rsquo;fɔːmə] n.  改革家；改革运动者【词频 6798】
+reformed [rɪ&rsquo;fɔːmd] adj. 改革过的；新教的【词频 13749】
+reformist [rɪ&rsquo;fɔrmɪst] n. 改革者；改革主义者 adj. 改良主义的；改良运动的【词频 17106，24676】
+reforming [,rɪ&rsquo;fɔrm] n. 重整；改进；变换【词频 19087】 reformation [refə&rsquo;meɪʃ(ə)n] n. 革新；改善【词频 23381】
+reform-minded [rɪ&rsquo;fɔːm-&lsquo;maɪndɪd] adj. 决心改革的【词频 26375】
+counter-reformation [[&lsquo;kauntə-refə&rsquo;meɪʃ(ə)n] n. 反宗教改革【词频 37819】 pro-reform [ˌprəʊrɪˈfɔːm] adj. 支持改革的；尤指政治上【词频 41087】 unreformed [ʌn&rsquo;rɪ&rsquo;fɔːmd] adj. 未经宗教改革的【词频 42188】
+reformism [rɪ&rsquo;fɔːmɪzəm] n. 改良主义；改革主义【词频 45407】
+reformatory [rɪ&rsquo;fɔːmət(ə)rɪ] adj. 改革的；感化的；革新的 n. 少年管教所；妓女教养所【词频 49719】 welfare-reform [&lsquo;welfeə-rɪ&rsquo;fɔːm] n. 福利改革【词频 38276】
+health-reform [&lsquo;helθɪ-rɪ&rsquo;fɔːm] n. 卫生改革；医疗改革【词频 58469】 
+anti-reform [ˈæntɪ-rɪ&rsquo;fɔːm] adj. 反传统形式的【词频 51454】</li>
+</ul>
+<h5 id="reform_1">reform<a class="headerlink" href="#reform_1" title="Permanent link"></a></h5>
+<ul>
+<li>改革</li>
+<li>重组</li>
+<li>改过自新</li>
+</ul>
+<h5 id="reformer">reformer<a class="headerlink" href="#reformer" title="Permanent link"></a></h5>
+<ul>
+<li>改革者</li>
+</ul>
+<h5 id="reformed">reformed<a class="headerlink" href="#reformed" title="Permanent link"></a></h5>
+<ul>
+<li>改革过的</li>
+</ul>
+<h5 id="reformist">reformist<a class="headerlink" href="#reformist" title="Permanent link"></a></h5>
+<ul>
+<li>改良主义的</li>
+<li>改良者</li>
+</ul>
+<h5 id="reformism">reformism<a class="headerlink" href="#reformism" title="Permanent link"></a></h5>
+<ul>
+<li>改良主义</li>
+</ul>
+<h5 id="reforming">reforming<a class="headerlink" href="#reforming" title="Permanent link"></a></h5>
+<ul>
+<li>重整</li>
+</ul>
+<h5 id="reformation">reformation<a class="headerlink" href="#reformation" title="Permanent link"></a></h5>
+<ul>
+<li>革新</li>
+<li>宗教改革</li>
+</ul>
+<h5 id="counter-reformation">counter-reformation<a class="headerlink" href="#counter-reformation" title="Permanent link"></a></h5>
+<ul>
+<li>反宗教改革</li>
+</ul>
+<h5 id="reform-minded">reform-minded<a class="headerlink" href="#reform-minded" title="Permanent link"></a></h5>
+<ul>
+<li>决定改革的</li>
+</ul>
+<h5 id="pro-reform">pro-reform<a class="headerlink" href="#pro-reform" title="Permanent link"></a></h5>
+<ul>
+<li>亲改革的</li>
+</ul>
+<h5 id="unreformed">unreformed<a class="headerlink" href="#unreformed" title="Permanent link"></a></h5>
+<ul>
+<li>未经宗教改革的</li>
+</ul>
+<h5 id="reformatory">reformatory<a class="headerlink" href="#reformatory" title="Permanent link"></a></h5>
+<ul>
+<li>改革的</li>
+<li>管教所</li>
+</ul>
+<h5 id="welfare-reform">welfare-reform<a class="headerlink" href="#welfare-reform" title="Permanent link"></a></h5>
+<ul>
+<li>福利改革</li>
+</ul>
+<h5 id="health-reform">health-reform<a class="headerlink" href="#health-reform" title="Permanent link"></a></h5>
+<ul>
+<li>医疗改革</li>
+</ul>
+<h5 id="anti-reform">anti-reform<a class="headerlink" href="#anti-reform" title="Permanent link"></a></h5>
+<ul>
+<li>反改革</li>
+</ul>
+<h3 id="conform">conform<a class="headerlink" href="#conform" title="Permanent link"></a></h3>
+<ul>
+<li>保持一致
+conform [kən&rsquo;fɔːm] vt. 使遵守；使一致【词频 7063】
+conformity [kən&rsquo;fɔːmɪtɪ] n. 一致，适合；符合【词频 11777】
+conformation [kɒnfɔː&rsquo;meɪʃ(ə)n] n. 构造；一致，符合；构象【词频 35405】 conformist [kən&rsquo;fɔːmɪst] n. 英国国教徒；遵奉者【词频 28745】
+nonconformity [nɒnkən&rsquo;fɔːmɪtɪ] n. 不一致；不信奉国教；不墨守成规【词频 35227】 nonconformist [nɒnkən&rsquo;fɔːmɪst] n. 不顺从一般公认信念习惯的人；不属于圣公会的英国基督教徒
+adj. 不墨守成规的；不顺从一般公认信念习惯的；不信奉国教的【词频 35534，36099】conformance [kən&rsquo;fɔːm(ə)ns] n. 一致性；顺应【词频 36344】
+conformism [kən&rsquo;fɔːmɪzəm] n. 因循守旧；盲从因袭的态度【词频 48985】 non-conforming [nɑnkən&rsquo;fɔrmɪŋ] adj. 非相容的【词频 48370】
+conformal [kən&rsquo;fɔːm(ə)l] adj. [数] 保角的；共形的；正形的【词频 52378】</li>
+</ul>
+<h5 id="conform_1">conform<a class="headerlink" href="#conform_1" title="Permanent link"></a></h5>
+<ul>
+<li>conform to 遵守</li>
+<li>相一致</li>
+</ul>
+<h5 id="conformity">conformity<a class="headerlink" href="#conformity" title="Permanent link"></a></h5>
+<ul>
+<li>墨守成规</li>
+<li>in conformity with 遵守</li>
+</ul>
+<h5 id="conformation">conformation<a class="headerlink" href="#conformation" title="Permanent link"></a></h5>
+<ul>
+<li>一致</li>
+</ul>
+<h5 id="conformist">conformist<a class="headerlink" href="#conformist" title="Permanent link"></a></h5>
+<ul>
+<li>墨守成规的</li>
+<li>墨守成规者</li>
+</ul>
+<h5 id="conformism">conformism<a class="headerlink" href="#conformism" title="Permanent link"></a></h5>
+<ul>
+<li>墨守成规</li>
+</ul>
+<h5 id="nonconformity">nonconformity<a class="headerlink" href="#nonconformity" title="Permanent link"></a></h5>
+<ul>
+<li>不墨守成规</li>
+</ul>
+<h5 id="nonconformist">nonconformist<a class="headerlink" href="#nonconformist" title="Permanent link"></a></h5>
+<ul>
+<li>不墨守成规的人</li>
+</ul>
+<h5 id="conformance">conformance<a class="headerlink" href="#conformance" title="Permanent link"></a></h5>
+<ul>
+<li>一致性</li>
+</ul>
+<h5 id="non-conforming">non-conforming<a class="headerlink" href="#non-conforming" title="Permanent link"></a></h5>
+<ul>
+<li>不合规的</li>
+</ul>
+<h5 id="conformal">conformal<a class="headerlink" href="#conformal" title="Permanent link"></a></h5>
+<ul>
+<li>保角的</li>
+</ul>
+<h3 id="deform">deform<a class="headerlink" href="#deform" title="Permanent link"></a></h3>
+<ul>
+<li>de分 畸形
+deform [dɪ&rsquo;fɔːm] vt. 使变形；使成畸形 vi. 变形；变畸形 adj. 畸形的；丑陋的【词频 15232，24725】 deformed [dɪ&rsquo;fɔːmd] adj. 畸形的；丑陋的
+deformity [dɪ&rsquo;fɔːmɪtɪ] n. 畸形；畸形的人或物【词频 15925】 deformation [,diːfɔː&rsquo;meɪʃ(ə)n] n. 变形【词频 19197】 deformable [,di&rsquo;fɔ:məbl] adj. 可变形的【词频 45625】</li>
+</ul>
+<h5 id="deform_1">deform<a class="headerlink" href="#deform_1" title="Permanent link"></a></h5>
+<ul>
+<li>使变形</li>
+</ul>
+<h5 id="deformed">deformed<a class="headerlink" href="#deformed" title="Permanent link"></a></h5>
+<ul>
+<li>畸形的</li>
+</ul>
+<h5 id="deformity">deformity<a class="headerlink" href="#deformity" title="Permanent link"></a></h5>
+<ul>
+<li>畸形</li>
+</ul>
+<h5 id="deformation">deformation<a class="headerlink" href="#deformation" title="Permanent link"></a></h5>
+<ul>
+<li>变形</li>
+</ul>
+<h5 id="deformable">deformable<a class="headerlink" href="#deformable" title="Permanent link"></a></h5>
+<ul>
+<li>可变形的</li>
+</ul>
+<h3 id="formidable">formidable<a class="headerlink" href="#formidable" title="Permanent link"></a></h3>
+<ul>
+<li>形成整体，可怕的
+formidable [&lsquo;fɔːmɪdəb(ə)l] adj. 强大的；可怕的【词频 6312】
+formidably [&lsquo;fɔ:midəbli] adv. 强大地；难对付地；可怕地【词频 44258】</li>
+</ul>
+<h5 id="formidable_1">formidable<a class="headerlink" href="#formidable_1" title="Permanent link"></a></h5>
+<ul>
+<li>可怕的</li>
+</ul>
+<h5 id="formidably">formidably<a class="headerlink" href="#formidably" title="Permanent link"></a></h5>
+<ul>
+<li>可怕的</li>
+</ul>
+<h3 id="formalin">formalin<a class="headerlink" href="#formalin" title="Permanent link"></a></h3>
+<ul>
+<li>形成 甲醛 
+formaldehyde [fɔː&rsquo;mældɪhaɪd] n. 蚁醛，[有化] 甲醛；福尔马林【词频 21114】
+formalin [&lsquo;fɔrməlɪn] n. [药] 福尔马林【词频 46403】
+coliform [&lsquo;kɒlɪfɔːm] adj. 像大肠菌的；筛状的 n. 大肠菌（等于 coliform bacillus）【词频 21359】 total-coliform [&lsquo;təʊt(ə)l-&lsquo;kɒlɪfɔːm] n. 总大肠菌类【词频 58660】
+chloroform [&lsquo;klɔːrəfɔːm] n. 氯仿；三氯甲烷 vt. 用氯仿麻醉【词频 29625】
+fecal-coliform [&lsquo;fiːkəl-&lsquo;kɒlɪfɔːm] n. 粪便大肠菌【词频 48671】（col圆柱体）
+formica-topped [fɔr&rsquo;maɪkə-tɒpt] adj. 福米加塑料贴面的【词频 53613】 
+ formic [&lsquo;fɔːmɪk] adj. 甲酸的；蚁的；蚁酸的【词频 57487】
+ formant [&lsquo;fɔːm(ə)nt] n. [电子] 共振峰，话音素【词频 59953】</li>
+</ul>
+<h5 id="formaldehyde">formaldehyde<a class="headerlink" href="#formaldehyde" title="Permanent link"></a></h5>
+<ul>
+<li>甲醛</li>
+</ul>
+<h5 id="formalin_1">formalin<a class="headerlink" href="#formalin_1" title="Permanent link"></a></h5>
+<ul>
+<li>福尔马林</li>
+</ul>
+<h5 id="coliform">coliform<a class="headerlink" href="#coliform" title="Permanent link"></a></h5>
+<ul>
+<li>筛状的</li>
+<li>大肠杆菌</li>
+</ul>
+<h5 id="total-coliform">total-coliform<a class="headerlink" href="#total-coliform" title="Permanent link"></a></h5>
+<ul>
+<li>总大肠杆菌类</li>
+</ul>
+<h5 id="fecal-coliform">fecal-coliform<a class="headerlink" href="#fecal-coliform" title="Permanent link"></a></h5>
+<ul>
+<li>粪便大肠杆菌</li>
+</ul>
+<h5 id="chloroform">chloroform<a class="headerlink" href="#chloroform" title="Permanent link"></a></h5>
+<ul>
+<li>氯仿</li>
+</ul>
+<h5 id="formica-topped">formica-topped<a class="headerlink" href="#formica-topped" title="Permanent link"></a></h5>
+<ul>
+<li>福米加塑料贴面的</li>
+</ul>
+<h5 id="formic">formic<a class="headerlink" href="#formic" title="Permanent link"></a></h5>
+<ul>
+<li>甲酸</li>
+</ul>
+<h5 id="formant">formant<a class="headerlink" href="#formant" title="Permanent link"></a></h5>
+<ul>
+<li>共振峰</li>
+</ul></article></body></html>
